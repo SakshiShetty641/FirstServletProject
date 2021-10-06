@@ -20,10 +20,12 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// get request parameters for UserID and Password
+		
+		//To get request parameters for UserID and Password
 		String user = request.getParameter("user");
 		String pwd = request.getParameter("pwd");
-		// get servlet config init params
+		
+		//To get servlet config init params
 		String userId = getServletConfig().getInitParameter("user");
 		String password = getServletConfig().getInitParameter("password");
 		if (userId.equals(user) && password.equals(pwd)) {
